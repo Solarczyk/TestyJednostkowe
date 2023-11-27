@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit bootstrap="./vendor/autoload.php"
+    colors="true"
+    stopOnFailure="false"     
+    displayDetailsOnTestsThatTriggerWarnings="true">
+
+    <testsuites>
+        <testsuite name="testAll">
+            <directory>tests</directory>
+        </testsuite>
+        <testsuite name="TestAuth">
+            <file>tests/AuthBasicTest.php</file>
+        </testsuite>
+        <testsuite name="TestSensor">
+            <file>tests/SensorTest.php</file>
+        </testsuite>
+        <testsuite name="TestConnect">
+            <file>tests/DataBaseConnTest.php</file>
+        </testsuite>
+    </testsuites>
+    <php>
+        <server name="HTTP_USER_AGENT" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"/>
+        <server name="REMOTE_ADDR" value="127.0.0.1"/>
+    </php>
+</phpunit>
